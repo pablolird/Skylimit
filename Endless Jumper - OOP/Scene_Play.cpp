@@ -89,6 +89,7 @@ void Scene_Play::sDoAction(const Action& action) {
 }
 
 void Scene_Play::update() {
+	m_dt60 = std::min(m_deltaClock.restart().asSeconds() * 60.f, 3.f);
 	sRemoveDeadPlatforms();
 	m_entityManager.update();
 	if (!m_paused) {
@@ -131,7 +132,7 @@ void Scene_Play::loadLevel() {
 			auto tile = m_entityManager.addEntity("tile");
 			y_pos -= 100.0f;  // Adjust spacing between tiles
 
-			// Crear un generador de números aleatorios basado en el tiempo del sistema
+			// Crear un generador de nï¿½meros aleatorios basado en el tiempo del sistema
 			std::random_device rd;
 			std::mt19937 gen(rd());
 
@@ -154,9 +155,9 @@ void Scene_Play::loadLevel() {
 			}
 			else {
 				if (type == 2) {
-					// Crear una distribución de Bernoulli con probabilidad de 0.8 para obtener true (lo que representará 1)
+					// Crear una distribuciï¿½n de Bernoulli con probabilidad de 0.8 para obtener true (lo que representarï¿½ 1)
 					std::bernoulli_distribution d(0.7);
-					// Generar el número basado en la distribución
+					// Generar el nï¿½mero basado en la distribuciï¿½n
 					int side = d(gen) ? 0 : 1;
 					auto pos_x = x_spawn_min + 100 + rand() % 300 + side * win_width / 2.f;
 					tile->addComponent<CTransform>(Vec2(pos_x, y_pos));
@@ -434,7 +435,7 @@ void Scene_Play::sMovement() {
 
 	if (m_move) {
 		// Calculate the new position using interpolation
-		float t = 0.05f;  // Adjust t for the desired speed (0 < t < 1)
+		float t = std::min(0.05f * m_dt60, 0.15f);  // Adjust t for the desired speed (0 < t < 1), scaled to fps
 		sf::Vector2f currentViewPosition = m_view.getCenter();
 		sf::Vector2f newViewPosition = lerp(currentViewPosition, sf::Vector2f(m_targetViewPosition.x, m_targetViewPosition.y), t);
 
@@ -469,8 +470,8 @@ void Scene_Play::sMovement() {
 		}
 		m_player->getComponent<CTransform>().prevPos = player_pos;
 
-		player_velocity.y += m_player->getComponent<CGravity>().gravity;
-		player_pos += player_velocity;
+		player_velocity.y += m_player->getComponent<CGravity>().gravity * m_dt60;
+		player_pos += player_velocity * m_dt60;
 
 		if (player_velocity.y > 20) {
 			player_velocity.y = 20;
@@ -496,7 +497,7 @@ void Scene_Play::sMovement() {
 	for (auto& e : m_entityManager.getEntities("tile")) {
 		if (e->hasComponent<CMove>()) {
 			auto & movingTile = e->getComponent<CTransform>();
-			movingTile.pos += movingTile.velocity;
+			movingTile.pos += movingTile.velocity * m_dt60;
 			e->getComponent<CAnimation>().animation.getSprite().setPosition(movingTile.pos.x, movingTile.pos.y);
 			if (movingTile.pos.x < x_spawn_min + win_width / 2) {
 				if (movingTile.pos.x < x_spawn_min + 100 ||
@@ -522,7 +523,7 @@ void Scene_Play::onEnd() {
 }
 
 void Scene_Play::sPlatformGeneration() {
-	// Crear un generador de números aleatorios basado en el tiempo del sistema
+	// Crear un generador de nï¿½meros aleatorios basado en el tiempo del sistema
 	std::random_device rd;
 	std::mt19937 gen(rd());
 

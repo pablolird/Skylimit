@@ -28,30 +28,30 @@
 
 ## 🌟 Features
 
-- **Endless Procedural Generation**: Platforms spawn dynamically above the player. Spacing increases the higher you go, making the game progressively harder.
-- **Two Platform Types**:
-  - **Grass tiles** — Static platforms, safe to land on.
-  - **Log tiles** — Moving platforms that bounce back and forth horizontally.
-  - Both types have **hazard variants** (spikes) that kill the player on contact.
-- **8 Scrolling Parallax Backgrounds**: The world visually evolves every 5000 points with smooth background crossfade transitions.
-- **Persistent High Score**: Your best run is saved to disk and shown in-game with a visual marker line.
-- **Character Shop**: Unlock and equip 6 unique skins — Default, Ghost, Golden, Twilight, Emerald, and Venoso.
-- **Settings**: Adjust volume, toggle music on/off, and switch between Arrow Keys and WASD controls.
-- **Pause & Replay**: Pause at any time or instantly replay after a run ends.
-- **Sound & Music**: Distinct background music for menu and gameplay, plus sound effects for jumping, navigation, and selection.
-- **Frame-Rate Independent Physics**: Game speed is normalized via delta time, ensuring identical gameplay at any monitor refresh rate (60Hz, 120Hz, etc.).
+* **Endless Procedural Generation**: Platforms spawn dynamically above the player. Spacing increases the higher you go, making the game progressively harder.
+* **Two Platform Types**:
+  * **Grass tiles** — Static platforms, safe to land on.
+  * **Log tiles** — Moving platforms that bounce back and forth horizontally.
+  * Both types have **hazard variants** (spikes) that kill the player on contact.
+* **8 Scrolling Parallax Backgrounds**: The world visually evolves every 5000 points with smooth background crossfade transitions.
+* **Persistent High Score**: Your best run is saved to disk and shown in-game with a visual marker line.
+* **Character Shop**: Unlock and equip 6 unique skins — Default, Ghost, Golden, Twilight, Emerald, and Venoso.
+* **Settings**: Adjust volume, toggle music on/off, and switch between Arrow Keys and WASD controls.
+* **Pause & Replay**: Pause at any time or instantly replay after a run ends.
+* **Sound & Music**: Distinct background music for menu and gameplay, plus sound effects for jumping, navigation, and selection.
+* **Frame-Rate Independent Physics**: Game speed is normalized via delta time, ensuring identical gameplay at any monitor refresh rate (60Hz, 120Hz, etc.).
 
 ---
 
 ## 🎮 Controls
 
-| Action       | Key (Default) | Key (WASD) |
-| ------------ | ------------- | ---------- |
-| Move Left    | ← Arrow       | A          |
-| Move Right   | → Arrow       | D          |
-| Pause        | P             | P          |
-| Replay       | R             | R          |
-| Quit to Menu | ESC           | ESC        |
+| Action        | Key (Default)      | Key (WASD)       |
+|---------------|--------------------|------------------|
+| Move Left     | ← Arrow            | A                |
+| Move Right    | → Arrow            | D                |
+| Pause         | P                  | P                |
+| Replay        | R                  | R                |
+| Quit to Menu  | ESC                | ESC              |
 
 > Controls can be switched between **Arrow Keys** and **WASD** in the Settings menu.
 
@@ -62,14 +62,14 @@
 <!-- Shop screen image: grid of 6 character previews with their names and prices -->
 <!-- Replace with: <img src="assets/shop.png" alt="Skin Shop" width="700"/> -->
 
-| Skin     | Price |
-| -------- | ----- |
-| Default  | Free  |
-| Ghost    | $10   |
-| Golden   | $20   |
-| Twilight | $30   |
-| Emerald  | $40   |
-| Venoso   | $69   |
+| Skin       | Price   |
+|------------|---------|
+| Default    | Free    |
+| Ghost      | $10     |
+| Golden     | $20     |
+| Twilight   | $30     |
+| Emerald    | $40     |
+| Venoso     | $69     |
 
 ---
 
@@ -106,16 +106,16 @@ Endless Jumper - OOP/
 
 ### Components
 
-| Component      | Purpose                                       |
-| -------------- | --------------------------------------------- |
-| `CTransform`   | Position, previous position, velocity         |
-| `CInput`       | Player input state (left, right, up, canJump) |
-| `CBoundingBox` | Axis-aligned hitbox size and half-size        |
-| `CAnimation`   | Current animation and repeat flag             |
-| `CGravity`     | Per-entity gravity value                      |
-| `CState`       | Player state string (idle, jump, fall, run)   |
-| `CKill`        | Marks a platform as lethal (spike variant)    |
-| `CMove`        | Marks a platform as horizontally moving       |
+| Component      | Purpose                                          |
+|----------------|--------------------------------------------------|
+| `CTransform`   | Position, previous position, velocity            |
+| `CInput`       | Player input state (left, right, up, canJump)    |
+| `CBoundingBox` | Axis-aligned hitbox size and half-size           |
+| `CAnimation`   | Current animation and repeat flag                |
+| `CGravity`     | Per-entity gravity value                         |
+| `CState`       | Player state string (idle, jump, fall, run)      |
+| `CKill`        | Marks a platform as lethal (spike variant)       |
+| `CMove`        | Marks a platform as horizontally moving          |
 
 ---
 
@@ -123,13 +123,12 @@ Endless Jumper - OOP/
 
 ### Prerequisites
 
-- **C++17** compiler (MSVC, GCC, or Clang)
-- **SFML 2.x** — [sfml-dev.org](https://www.sfml-dev.org/)
+* **C++17** compiler (MSVC, GCC, or Clang)
+* **SFML 2.x** — [sfml-dev.org](https://www.sfml-dev.org/)
 
 ### Windows (Visual Studio)
 
 1. Clone the repository:
-
    ```bash
    git clone https://github.com/pablolird/Skylimit.git
    cd Skylimit
@@ -144,7 +143,6 @@ Endless Jumper - OOP/
 ### macOS / Linux (CMake or manual)
 
 1. Install SFML via your package manager:
-
    ```bash
    # macOS
    brew install sfml
@@ -154,7 +152,6 @@ Endless Jumper - OOP/
    ```
 
 2. Compile all `.cpp` files and link against SFML:
-
    ```bash
    g++ -std=c++17 *.cpp -o Skylimit -lsfml-graphics -lsfml-window -lsfml-audio -lsfml-system
    ```

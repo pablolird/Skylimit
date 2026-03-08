@@ -27,6 +27,8 @@ protected:
 
 
 	std::shared_ptr<Entity> m_player;	/// shared pointer to the player
+	sf::Clock m_deltaClock;				/// clock to measure time between frames
+	float m_dt60 = 1.f;				/// delta time normalized to 60fps (1.0 at 60fps, 0.5 at 120fps)
 public:
 	Scene_Play(GameEngine* gameEngine);
 
