@@ -19,9 +19,7 @@
 
 ---
 
-<!-- Gameplay GIF/video: the player jumping between platforms, camera following upward, score increasing -->
-<!-- Replace with: <img src="assets/gameplay.gif" alt="Gameplay" width="700"/> -->
-https://github.com/user-attachments/assets/5d3eb417-90af-45ec-90ce-60adb108bcc6
+https://github.com/user-attachments/assets/91cf77d0-7fe3-4767-b3df-62bb9fa98efd
 
 ---
 
