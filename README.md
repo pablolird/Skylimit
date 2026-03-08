@@ -1,5 +1,4 @@
 <p align="center">
-  <!-- Logo image: centered SKYLIMIT logo/title card, e.g. the game title over a space/sky background -->
   <img width="553" height="147" alt="Skylimit Logo" src="https://github.com/user-attachments/assets/ee4db746-af2c-4e3e-9805-f44d5550754d" />
 
 </p>
@@ -22,6 +21,7 @@
 
 <!-- Gameplay GIF/video: the player jumping between platforms, camera following upward, score increasing -->
 <!-- Replace with: <img src="assets/gameplay.gif" alt="Gameplay" width="700"/> -->
+https://github.com/user-attachments/assets/5d3eb417-90af-45ec-90ce-60adb108bcc6
 
 ---
 
