@@ -56,8 +56,8 @@ https://github.com/user-attachments/assets/91cf77d0-7fe3-4767-b3df-62bb9fa98efd
 
 ## 🏪 Skin Shop
 
-<!-- Shop screen image: grid of 6 character previews with their names and prices -->
-<!-- Replace with: <img src="assets/shop.png" alt="Skin Shop" width="700"/> -->
+<img width="1274" height="697" alt="Screenshot 2026-03-08 at 6 19 18 PM" src="https://github.com/user-attachments/assets/30300a72-5cf8-4dd3-84c4-74830335a394" />
+
 
 | Skin     | Price |
 | -------- | ----- |
@@ -66,7 +66,7 @@ https://github.com/user-attachments/assets/91cf77d0-7fe3-4767-b3df-62bb9fa98efd
 | Golden   | $20   |
 | Twilight | $30   |
 | Emerald  | $40   |
-| Venoso   | $69   |
+| Venoso   | $100   |
 
 ---
 
@@ -162,19 +162,6 @@ Endless Jumper - OOP/
    ```
 
 > Make sure the `Assets/` folder is in the same directory as the executable.
-
----
-
-## 📸 Screenshots
-
-<!-- Main menu screenshot: title "SKYLIMIT" over a parallax background with Play/Shop/Settings options -->
-<!-- Replace with: <img src="assets/menu.png" alt="Main Menu" width="700"/> -->
-
-<!-- Gameplay screenshot: player mid-jump between platforms with score displayed and parallax background -->
-<!-- Replace with: <img src="assets/gameplay.png" alt="Gameplay" width="700"/> -->
-
-<!-- Background transition GIF: the crossfade between two parallax world themes -->
-<!-- Replace with: <img src="assets/transition.gif" alt="Background Transition" width="700"/> -->
 
 ---
 
