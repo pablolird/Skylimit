@@ -3,10 +3,8 @@
   <!-- <img src="assets/logo.png" alt="SKYLIMIT Logo" width="400"/> -->
 </p>
 
-<p align="center">
   ![GitHub Created At](https://img.shields.io/github/created-at/pablolird/Skylimit)
   ![GitHub contributors](https://img.shields.io/github/contributors/pablolird/Skylimit)
-</p>
 
 ---
 
