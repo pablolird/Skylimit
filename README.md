@@ -1,6 +1,7 @@
 <p align="center">
   <!-- Logo image: centered SKYLIMIT logo/title card, e.g. the game title over a space/sky background -->
-  <!-- <img src="assets/logo.png" alt="SKYLIMIT Logo" width="400"/> -->
+  <img width="553" height="147" alt="Skylimit Logo" src="https://github.com/user-attachments/assets/ee4db746-af2c-4e3e-9805-f44d5550754d" />
+
 </p>
 
   ![GitHub Created At](https://img.shields.io/github/created-at/pablolird/Skylimit)
